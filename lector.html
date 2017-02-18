@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html ng-app="lectorapp">
+
+    <head>
+        <title> Panel</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">        
+        <script src="lib/angular.min.js" type="text/javascript"></script>
+        <script src="lib/angular-route.min.js" type="text/javascript"></script>
+        <script src="lib/angular-cookies.min.js" type="text/javascript"></script>
+        <script src="lib/lodash.js" type="text/javascript"></script>
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+   
+        <style>
+            .radio,
+            .radio label {
+                font-size: 1em;
+            }
+
+            p {
+                font-size: 1.1em;
+            }
+
+            video {
+                display: block;
+                width: 100%;
+            }
+
+            label {
+                display: block;
+            }
+            /*            input{
+                            margin:10px;
+                            display: block;
+                        }*/
+            .msg-block {
+                margin-top:5px;
+            }
+            .msg-error {
+                color:#F00;
+                font-size:14px;
+            }
+
+            .css-form input.ng-invalid.ng-touched {
+                background-color: #FA787E;
+            }
+
+            .css-form input.ng-valid.ng-touched {
+                background-color: #78FA89;
+            }
+        </style>
+        <!--        <base href="/">-->
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="col-lg-6">
+                Lector
+            </div>
+
+        </div>
+        <div class="container">
+
+            <hr> 
+
+        </div>
+        <div class="container">
+           
+                <div ng-view></div>   
+          
+            
+        </div>
+        <script src="lectorjs/lectorapp.js" type="text/javascript"></script>
+        <script src="lectorjs/controllers/allTutorialsLectorCtrl.js" type="text/javascript"></script>
+        <script src="lectorjs/controllers/editLectorCtrl.js" type="text/javascript"></script>
+        <script src="lectorjs/controllers/loginCtrl.js" type="text/javascript"></script>
+        <script src="lectorjs/controllers/logoutCtrl.js" type="text/javascript"></script>
+        <script src="lectorjs/controllers/middleLectorCtrl.js" type="text/javascript"></script>
+        <script src="lectorjs/controllers/newTutorLectorCtrl.js" type="text/javascript"></script>
+        <script src="lectorjs/controllers/signinCtrl.js" type="text/javascript"></script>
+        <script src="lectorjs/directives/equal.js" type="text/javascript"></script>
+        <script src="lectorjs/directives/isunique.js" type="text/javascript"></script>
+        <script src="lectorjs/factory/lectorEdit.js" type="text/javascript"></script>
+        <script src="lectorjs/factory/loginFactory.js" type="text/javascript"></script>
+        <script src="lectorjs/factory/middle.js" type="text/javascript"></script>
+        <script src="lectorjs/factory/newTutor.js" type="text/javascript"></script>
+        <script src="lectorjs/factory/signinFactory.js" type="text/javascript"></script>
+        <script src="lectorjs/factory/tutorials.js" type="text/javascript"></script>
+    </body>
+
+</html>

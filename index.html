@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+    <head>
+        <title>JS Tutorial</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="" />
+        <link rel="icon" href="img/shevitza.ico"/>
+        <script src="lib/angular.min.js"></script>
+        <script src="lib/angular-route.min.js"></script>
+        <script src="lib/lodash.js"></script>
+        <script src="mainjs/app.js"></script>
+        <script src="mainjs/controllers.js"></script>
+        <script src="mainjs/factory.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+
+        <style>
+            .radio,
+            .radio label {
+                font-size: 1em;
+            }
+
+            p {
+                font-size: 1.1em;
+            }
+
+            video {
+                display: block;
+                width: 100%;
+            }
+
+            label {
+                display: block;
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+        <div class="container">
+            <h1><a href="#/">JavaScript Tutorial</a></h1>
+            <div class="row">
+                <p class="text-primary" style="font-style:italic;">Експериментален онлайн курс за програмиране с видео, упражнения и тест, за по-бързо учене!</p>
+            </div>
+            <div ng-view></div>
+
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10">
+
+                </div>
+                <div class="col-lg-2">
+                    <a href="http://www.videourok.com/welcome/contact" class="btn btn-primary">Изпратетет съобщение!</a>
+                </div>
+            </div>
+        </div>
+        <div class="container">   
+            <footer>
+                <div class="row">
+                    <hr>
+                    <div class="col-lg-12">
+                        Евгения Христова, &copy София, 2016 - 2017 
+
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </body>
+
+</html>
