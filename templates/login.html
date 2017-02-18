@@ -1,0 +1,15 @@
+<div class="row" ng-controller="loginCtrl">
+    <h2>Вход</h2>
+
+    <div class="row">
+        <form  name="login" class="css-form">
+            <div class="col-lg-3">
+                <label>Имейл адрес:</label>
+                <input type="email"  size="128" class="form-control" ng-model="email" required> {{email}}              
+                <label> Парола </label>
+                <input type="password" name="password" class="form-control"   ng-model="password"  required />
+                <button class="btn btn-default" ng-click="checkUser()">Вход</button>
+            </div>
+        </form>
+    </div>
+</div>

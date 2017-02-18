@@ -1,0 +1,42 @@
+
+<div class ="radio" ng-controller="test">
+    <div class="row">
+        <div class="col-lg-4" style="border:1px solid gray; border-radius:5px; margin:2px;">
+            <div  ng-repeat="leftVal in randomLeftMap" >            
+                <label for="l{{leftVal[0]}}"><input type="radio" id="l{{leftVal[0]}}" name="leftRadios" value="{{leftVal[1]}}"  ng-model="$parent.left"/> {{leftVal[1]}}</label>
+            </div>
+        </div>
+        <div class="col-lg-2" style="border:1px solid gray; border-radius:5px; margin:2px;">
+            <div ng-repeat="midVal in middleMap" >            
+                <label for="m{{midVal[0]}}"><input type="radio" id="m{{midVal[0]}}" name="middleRadios" value="{{midVal[1]}}"  ng-model="$parent.middle"/> {{midVal[1]}}</label>
+            </div>
+        </div>
+        <div class="col-lg-4"  style="border:1px solid gray; border-radius:5px; margin:2px;">
+            <div ng-repeat="rightVal in randomRightMap">            
+                <label for="m{{rightVal[0]}}"><input type="radio" id="m{{rightVal[0]}}" name="rightRadios" value="{{rightVal[1]}}"  ng-model="$parent.right"/> {{rightVal[1]}}</label>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="text-warning" style="margin:20px 0;">  {{left}} {{middle}} {{right}} </div>
+            <p>
+            <button class="btn btn-primary" ng-click="checkResult()">Провери горното твърдение!</button> {{result}}
+            </p>
+        </div>
+        <div class="col-lg-12">
+            <div>  Вашите верни отговори:</div>
+            <div  ng-repeat="g in guess">
+                         
+                          <div class="text-info">
+                             {{g}} 
+                          </div>
+                
+            </div>
+        </div>
+    </div>
+
+</div>
+
+

@@ -1,0 +1,67 @@
+<div class="row" ng-controller="middleLectorCtrl" ng-init="middle.list()">
+                <div class="container">
+            <div class="col-lg-6">
+                <a href="#/" class="btn  btn-info">All Tutorial</a>
+                <a href="#/new" class="btn  btn-success">New Tutorial</a>            
+                <a href="#/middle" class="btn  btn-warning">Edit Middle</a> 
+            </div>
+
+        </div>
+        <div class="container">
+
+            <hr> 
+
+        </div>
+    <h2>Редактиране на среден елемент</h2>
+    <p>Можете да изтриете среден елемент, ако все още не е използван!</p>
+    <div class="row">
+        <div class="col-lg-3">
+            <!--echo form_open('author/delete_middle', 'class="bs-component" id="delete-middle"');-->
+<!--            <form class="bs-component">-->
+                <div class="form-group">
+
+                    <div ng-repeat="midd in middle">
+                        <div ng-if="midd.active == 'active'">
+                            {{midd.middleContent}} <span style="color:orange; font-style:italic; font-size:.8em;"> използва се; </span>
+                        </div>
+                        <div ng-if="midd.active == 'notactive'">
+                            <label>
+                                <input type="radio" name="middleRadios" id="{{midd.MiddleID}}"  value="{{midd.MiddleID}}" ng-model="selected.id" checked="false">                    
+                                {{midd.middleContent}} 
+                            </label>
+                        </div>
+                    </div>
+                    {{selected.id}}
+                    <button class="btn btn-primary" ng-click="middleDelete()">Изтрий избраното!</button>
+                </div>
+<!--            </form>-->
+        </div>
+
+
+        <div class="col-lg-3">
+            <!--    $middle_input = array(
+                'name' => 'middleContent',
+                'maxlength' => '200',
+                'size' => '100',
+                'class' => 'form-control',
+                'id' => 'middle-content'
+                );-->
+            <form class="bs-component">
+                <!--    echo form_open('author/add_middle', 'class="bs-comonent" id="add-middle"');-->
+                <div class="form-group">
+                    <label class="control-label" for="addMiddleContent">Добавете уникална свързваща дума:</label>
+                    <input type="text" name ='middleContent' maxlength = 200 size = 100 class = "form-control" ng-model="middleContent">
+                </div>
+               <button class="btn btn-primary" ng-click="middleAdd()">Добави!</button>
+               {{middleContent}}
+            </form>        
+        </div>
+    </div>
+
+
+</div>
+
+
+
+
+<!--//<input type='radio' name='val' value='Accepted' disabled='disabled' />-->

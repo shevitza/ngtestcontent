@@ -1,0 +1,54 @@
+<div class="row" ng-controller="signinCtrl">
+    <h2>Регистрация</h2>
+
+    <div class="row">
+        <div class="col-lg-3">
+            <form name="register" class="css-form">
+                <label>Имейл адрес:</label>
+                <input type="email" name="email" ng-model="email.text"  size="128" class="form-control" required>
+              
+<!--                <div role="alert">
+                    <span class="error" ng-show="register.email.$error.required">
+                        {{email}} Required!</span>
+                    <span class="error" ng-show="register.email.$error.email">
+                        Not valid email!</span>
+                </div>-->
+                <div>
+                    Парола /поне 5 символа/: <br>
+                    <input type="password" name="password" 
+                           required 
+                           id="password" 
+                           ng-model="password" 
+                           placeholder="Password" 
+                            pattern=".{5}|.{10,}" 
+                            title="Minimum 5 characters, maximum - 10"/>
+                </div>
+                <div>
+                    Повтори паролата:<br>
+                    <input type="password" name="confirmPassword"
+                           equal="password" 
+                           required 
+                           id="confirmPassword" 
+                           ng-model="confirmPassword" 
+                           placeholder="Confirm Password" />
+                </div>
+
+<!--                <div>
+                    password is valid: {{register.password.$valid}}
+                </div>
+                <div>
+                    confirmed password valid: {{register.confirmPassword.$valid}}
+                </div>
+                <div>
+                    confirmed password equals password: {{!register.confirmPassword.$error.equal}}
+                </div>-->
+                <div style="margin: 15px;">
+                    <button class="btn btn-primary" name="send" 
+                            ng-if="!register.email.$error || register.confirmPassword.$valid" ng-click="send()" >Изпрати</button>
+                    
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>

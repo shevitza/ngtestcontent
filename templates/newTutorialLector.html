@@ -1,0 +1,32 @@
+<div class="row" ng-controller="newTutorLectorCtrl">
+                <div class="container">
+            <div class="col-lg-6">
+                <a href="#/" class="btn  btn-info">All Tutorial</a>
+                <a href="#/new" class="btn  btn-success">New Tutorial</a>            
+                <a href="#/middle" class="btn  btn-warning">Edit Middle</a> 
+            </div>
+
+        </div>
+        <div class="container">
+
+            <hr> 
+
+        </div>
+    <div class="col-lg-6">
+        <div class="bs-component">
+            <label>Заглавие на урока:</label>
+            <input type="text" size="200" id="tutorname" class="form-control" name="tutorname" 
+                   ng-model="tutorname">
+            <br>
+            <label>url на урока:</label>
+            <input type="text" size="256" id="tutorialUrl" class="form-control" name="tutorialUrl" 
+                   ng-model="tutorialUrl">
+            <label>zip файл към урока:</label>
+            <input type="text" size="256" id="tutorialZip" class="form-control" name="tutorialZip" 
+                   ng-model="tutorialZip">
+            <br>
+            <button class="btn btn-primary" ng-click="addTutorial()">Запиши</button>
+            
+        </div>            
+    </div>        
+</div>

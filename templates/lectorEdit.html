@@ -1,0 +1,112 @@
+<div ng-controller="editLectorCtrl">
+            <div class="container">
+            <div class="col-lg-6">
+                <a href="#/" class="btn  btn-info">All Tutorial</a>
+                <a href="#/new" class="btn  btn-success">New Tutorial</a>            
+                <a href="#/middle" class="btn  btn-warning">Edit Middle</a> 
+            </div>
+
+        </div>
+        <div class="container">
+
+            <hr> 
+
+        </div>
+    
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="bs-component">
+                <div class="list-group table-of-contents" >
+                    <h3>{{tutor.tutorialName}} </h3>  
+                    <video ng-src="{{tutor.tutorialUrl}}" controls></video>
+                </div>
+                <p> <a ng-href="zip/{{tutor.tutorialZip}}">{{tutor.tutorialZip}}</a></p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <hr>
+        <div class="col-lg-8">
+            <div class="bs-component">
+                <h3>Редактиране:</h3>
+                <label>{{tutor.tutorialName}}</label>
+                <input type="text" size="200" id="tutorname" class="form-control" name="tutorname" 
+                       ng-model="tutorname" >
+                <br>
+                <label>{{tutor.tutorialUrl}}</label>
+                <input type="text" size="256" id="tutorialUrl" class="form-control" name="tutorialUrl" 
+                       ng-model="tutorialUrl" >
+                <label>{{tutor.tutorialZip}}</label>
+                <input type="text" size="256" id="tutorialZip" class="form-control" name="tutorialZip" 
+                       ng-model="tutorialZip" >
+                <br>
+                <button class="btn btn-primary" ng-click="updateTutorial()">Запиши</button>
+
+            </div>
+        </div>   
+    </div> 
+
+
+
+    <div class="row">
+        <hr>
+        <div class="col-lg-8">
+            <div ng-if="notSentence"><button class="btn btn-danger" ng-click="deleteTutorial()">Изтрий урока!</button></div>
+            <div class="bs-component" ng-if="!notSentence">
+
+                <h3>Изречения към урока </h3>
+
+
+                <div class="list-group-item" ng-repeat="answer in answers">
+                    <label>
+                        <input type="radio"  value="{{answer.val}}" ng-model="$parent.answerValue" name="answ" >
+                        {{answer.leftContent}} {{answer.middleContent}} {{answer.rightContent}} {{answer.val}}
+                    </label>
+                </div>
+                Избрано за изтриване: {{answerValue}}<br>
+                <button class="btn btn-primary" ng-click="deleteAnswer()">Изтрий избраното изречение!</button>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <hr>
+        <div class="col-lg-12">
+            <div class="bs-component">
+                <h3>Добави изречение</h3>
+                <form>
+                    <label>Лява част</label>
+                    <input type="text" name="leftContent" class="form-control" size="200" ng-model="$parent.leftContent">
+                    {{leftContent}}
+                    <label>Свързваща част</label>
+                    <span ng-repeat="mid in middle">
+                        <label style="display:inline">
+                            <input type="radio" name="middle" id="{{mid.MiddleID}}" ng-model="$parent.mid" value="{{mid.MiddleID}}">
+                            {{mid.middleContent}}
+                        </label>  
+                    </span>
+                    {{mid}} 
+                    <label>Дясна част</label>
+                    <input type="text" name="rightContent" class="form-control" size="200" ng-model="$parent.rightContent">
+                    {{rightContent}} - {{tutor.TutorialID}}<br>
+                    <button class="btn btn-primary" ng-click="addSentence()">Добави изречението</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="row">
+        <hr>
+        <div class="col-lg-12">
+            <h3>Списък на грешните отговори</h3>
+            <ul class="bs-component" ng-repeat="wronganswer in wronganswers">
+                <li>{{wronganswer.leftContent}} {{wronganswer.middleContent}} {{wronganswer.rightContent}}</li>
+            </ul>
+        </div>
+    </div>
+</div>
+

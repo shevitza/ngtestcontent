@@ -1,0 +1,29 @@
+<div class="row" ng-controller="allTutorialsLectorCtrl">
+    <div class="container">
+        <div class="col-lg-6">
+            <a href="#/" class="btn  btn-info">All Tutorial</a>
+            <a href="#/new" class="btn  btn-success">New Tutorial</a>            
+            <a href="#/middle" class="btn  btn-warning">Edit Middle</a> 
+            <a href="#/logout" class="btn  btn-warning">Logout</a> 
+        </div>
+
+    </div>
+    <div class="container">
+
+        <hr> 
+
+    </div>
+    <div class="col-lg-6">
+        <div class="bs-component">
+            <div class="list-group table-of-contents" >
+
+                <p class="list-group-item" ng-repeat="tutorial in tutorials">
+                    <a href="#/edit/{{tutorial.TutorialID}}">
+                        {{tutorial.tutorialName}}
+                    </a>
+
+                </p>
+
+            </div>
+        </div>
+    </div>
