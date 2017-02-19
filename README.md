@@ -1,6 +1,6 @@
 #Web Application for Educational Tests With AngularJS #
 <br />
-##Part for students## 
+##Part for students 
 The page is index.html. The student can select tutorial. 
 After reading the contents, the student can do the test.
 The test consists in a choice of three short texts to form a sentence.

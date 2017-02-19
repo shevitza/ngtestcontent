@@ -22,9 +22,7 @@
 
             $scope.middle = m;
         });
-//        $scope.reloadRoute = function () {
-//             $route.reload();
-//        }
+
         $scope.middleDelete = function () {
             middle.remove($scope.selected.id);
             $route.reload();
