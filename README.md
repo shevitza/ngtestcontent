@@ -18,4 +18,5 @@ The folder lectorjs contents files for application and  folder for controllers, 
 All templates for two parts are in folder templates.
 <br />
 ##Database##
-This application uses PHP and MySQL and all files for php are in folder db 
+This application uses PHP and MySQL and all files for php are in folder db. <br />
+There is a need for correction of the part in order to achieve a more compact code and better security.
