@@ -61,7 +61,7 @@
 
                 <div class="list-group-item" ng-repeat="answer in answers">
                     <label>
-                        <input type="radio"  value="{{answer.val}}" ng-model="$parent.answerValue" name="answ" >
+                        <input type="radio"  value="{{answer.val}}" ng-model="$parent.answerValue" name="answ" id="{{$parent.answerValue}}" >
                         {{answer.leftContent}} {{answer.middleContent}} {{answer.rightContent}} {{answer.val}}
                     </label>
                 </div>

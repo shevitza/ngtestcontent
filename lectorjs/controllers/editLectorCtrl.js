@@ -15,6 +15,9 @@
         lectorEdit.getTestById($routeParams.id, function (an) {
             for (var i = 0; i < an.length; i++) {
                 an[i].val = an[i].TutorialID + '-' + an[i].LeftID + '-' + an[i].MiddleID + '-' + an[i].RightID;
+                $scope.selected = {
+                    id: an[i].val
+                }
             }
             if (an.length > 0) {
                 $scope.notSentence = false
@@ -28,7 +31,7 @@
         });
 
         $scope.deleteAnswer = function () {
-            var arr = ($scope.answerValue).split('-');
+            var arr = ($scope.selected.id).split('-');
             $scope.el = {
                 tutorialID: arr[0],
                 leftID: arr[1],
