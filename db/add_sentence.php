@@ -19,3 +19,4 @@ $query .= " INSERT INTO answers (TutorialID, LeftID, MiddleID, RightID)"
     . " VALUES ($t, (SELECT MAX(leftID) FROM `left`),$m, (SELECT MAX(rightID) FROM `right`)); ";
 echo $query;
 $result = mysqli_multi_query($mysqli, $query) or die($mysqli->error . __LINE__);
+$result->close();

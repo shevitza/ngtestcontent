@@ -12,5 +12,5 @@ $query="INSERT INTO wronganswers (LeftID, MiddleID,"
   . " RightID, TutorialID) VALUES ($l, $m, $r, $id); ";
 echo $query;
 $result = $mysqli->query($query) or die($mysqli->error . __LINE__);
-
+$result->close();
 

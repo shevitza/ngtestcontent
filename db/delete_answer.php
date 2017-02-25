@@ -18,5 +18,5 @@ $query = "DELETE FROM answers WHERE
 echo $query;
 //$result = $mysqli->query($query) or die($mysqli->error . __LINE__);
 $result = mysqli_multi_query($mysqli, $query) or die($mysqli->error . __LINE__);
-
+$result->close();
 

@@ -27,4 +27,5 @@ if ($arr[0]['c']==1) {
 
 
 echo $json_response = json_encode($response, JSON_UNESCAPED_UNICODE);
+$result->close();
 

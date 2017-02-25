@@ -19,3 +19,4 @@ if ($result->num_rows > 0) {
   }
 }
 echo $json_response = json_encode($arr, JSON_UNESCAPED_UNICODE);
+$result->close();

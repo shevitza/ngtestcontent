@@ -13,3 +13,4 @@ if ($result->num_rows > 0) {
 echo $json_response = json_encode($arr, JSON_UNESCAPED_UNICODE);
 //SELECT middle.MiddleID AS MiddleID, middle.middleContent AS middleContent, answers.MiddleID AS used
 //FROM answers RIGHT JOIN middle ON answers.MiddleID = middle.MiddleID GROUP BY middle.MiddleID;
+$result->close();

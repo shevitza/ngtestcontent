@@ -13,3 +13,4 @@ $query = "UPDATE tutorial  SET tutorialName='$tutorialName', tutorialUrl='$tutor
 //
 echo $query;
 $result = $mysqli->query($query) or die($mysqli->error . __LINE__);
+$result->close();

@@ -12,6 +12,7 @@ $query = "INSERT INTO tutorial (tutorialName, tutorialUrl, tutorialZip)"
 //
 echo $query;
 $result = $mysqli->query($query) or die($mysqli->error . __LINE__);
+$result->close();
 
 
 
