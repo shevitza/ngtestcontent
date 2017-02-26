@@ -38,15 +38,12 @@ app.factory('wrong', ['$http', function ($http, el) {
             $http({
                 method: 'POST',
                 url: "db/recordWrongAns.php",
-//                headers: {
-//                    'Content-Type': undefined
-//                },
                 data: el
             }).then(function () {
-                console.dir("Success wrong answer: " + el)
+//                console.dir("Success wrong answer: " + el)
             },
                     function () {
-                        console.dir("reject wrong answer: " + el)
+//                        console.dir("reject wrong answer: " + el)
                     });
         }
         return{

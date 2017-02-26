@@ -1,12 +1,10 @@
 app.controller('allTutorialsController', ['$scope', 'tutorials', function ($scope, tutorials) {
-//        console.log('All Tutorials Controller');
         tutorials.list(function (tutorials) {
             $scope.tutorials = tutorials;
         });
     }]);
 app.controller('tutorialDetailsController', ['$scope', '$routeParams', 'tutorials',
     function ($scope, $routeParams, tutorials) {
-//        console.log('details');
         tutorials.find($routeParams.id, function (tutor) {
             $scope.tutor = tutor;
         });
@@ -35,7 +33,7 @@ app.controller('test', ['$scope', '$routeParams', 'test', 'wrong',
                 middleMap.set(testAnswers[i].MiddleID, testAnswers[i].middleContent);
                 rightArr.push(testAnswers[i].RightID);
                 rightMap.set(testAnswers[i].RightID, testAnswers[i].rightContent);
-                console.log(correctAnswers[i]);
+               
             }
 
 
@@ -109,7 +107,7 @@ app.controller('test', ['$scope', '$routeParams', 'test', 'wrong',
                             'r':wrongAnswers[2],
                             'id':wrongAnswers[3]
                         };
-                        console.dir($scope.data);
+                     
                         wrong.record($scope.data);
                         
                         
